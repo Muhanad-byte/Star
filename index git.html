@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STAR Summer School 2026/27 – Enrol</title>
+
+<!-- What people see when the link is shared on WhatsApp, Facebook, etc. -->
+<meta name="description" content="Enrol your child in the IICSA STAR Summer School Program, 14 Dec 2026 – 9 Jan 2027 at Iqra College, O'Halloran Hill.">
+<meta property="og:title" content="STAR Summer School 2026/27 – Enrolments open">
+<meta property="og:description" content="Three weeks of learning, creativity and fun for Muslim kids. Register and pay online.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#5bb8f5">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+
+<style>
+  html, body { margin:0; height:100%; background:#fffaf2; }
+  iframe { position:fixed; inset:0; width:100%; height:100%; border:0; display:block; }
+  .loading { position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+    font:600 16px system-ui, sans-serif; color:#7a7f96; }
+  .loading span { width:22px; height:22px; margin-right:10px; border:3px solid #eee6d8; border-top-color:#5bb8f5;
+    border-radius:50%; animation:s .8s linear infinite; }
+  @keyframes s { to { transform:rotate(360deg); } }
+</style>
+</head>
+<body>
+  <div class="loading" id="loading"><span></span>Loading enrolment form…</div>
+  <iframe id="app" title="STAR Summer School enrolment" allow="clipboard-write"></iframe>
+
+  <script>
+    // ✏️ Your Google Apps Script web app link (ends in /exec)
+    var APP_URL = 'https://script.google.com/macros/s/AKfycbxi70V-l6wENgt3IDZhfa91IDyyvbChIZudoRCCF8EZ0Nw_uvF8Z2WIsPW53uv0evU/exec';
+
+    var frame = document.getElementById('app');
+    frame.onload = function () { document.getElementById('loading').style.display = 'none'; };
+    // pass ?ref=... through (used when parents come back from Square or open their status link)
+    frame.src = APP_URL + window.location.search;
+  </script>
+</body>
+</html>
